@@ -14,7 +14,7 @@ function Register() {
   let registerfun=(newUser)=>{
     console.log(newUser)
    
-    axios.post("login-authentication-deploy.vercel.app/user-api/user-signup",newUser)
+    axios.post("login-authentication-deploy.vercel.app/api/user-signup",newUser)
     .then((response)=>{
     console.log("response is:",response);
 
