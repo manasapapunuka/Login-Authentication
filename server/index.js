@@ -5,7 +5,7 @@ const mongoDB=require('./db');
 
 const cors = require("cors");
 app.use(cors(
-  {
+  {  
     origin: ["https://login-authentication-frontend.vercel.app"],
     methods:["POST","GET"],
     credentials: true
