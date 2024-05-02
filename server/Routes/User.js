@@ -46,16 +46,20 @@ router.post("/user-login",async(request,response)=>{
         if(isEqual===false){
             response.status(200).send({message:"Invalid password"})
         }
-        else{
-            console.log("Login success");
-            //create JWT token
-            let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh',{expiresIn:100})
-            delete userOfDb.password;
-            response.status(200).send({message:"success",token:jwtToken})
 
+        const data={
+          user:{
+              id:userOfDb.id
+          }
+        }
+        console.log("Data:",data);
+            console.log("Login success");
+            
+            //create JWT token
+            let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh')
+            response.status(200).send({message:"success",token:jwtToken})  
         }
       }
-
 })
 
 
