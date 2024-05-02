@@ -24,13 +24,14 @@ function UserLoginStore({children}) {
             .post(" https://login-authentication-deploy.vercel.app/api/user-login",userCredObj)
             .then((response)=>{
                 if(response.data.message==="success"){
-                //navigate to user-profile
-                console.log("navigated to user profile");
-
-                localStorage.setItem("token",response.data.token)
-                setCurrentUser({...response.data.user});
-                setLoginError("");
-                setUserLoginStatus(true);
+                    //navigate to user-profile
+                    console.log("navigated to user profile");
+    
+                    localStorage.setItem("token",response.data.token)
+                    setCurrentUser({...response.data.user});
+                    setLoginError("");
+                    setUserLoginStatus(true);
+                     console.log(response.data.user);
                 }
                 else{
                 //console.log("login failed",err);
