@@ -11,7 +11,7 @@ function UserProfile() {
   let[currentUser,LoginError,userLoginStatus,loginUser,logoutUser]=useContext(loginContext)
 
   const picture=()=>{
-     console.log(" in user profile",currentUser,currentUser.dob,currentUser.gender,currentUser.name);
+     console.log(" in user profile",currentUser.email);
     if(currentUser.gender==="male"){
       return <img src={avatarb} alt="" className='user-img'></img>
     }
