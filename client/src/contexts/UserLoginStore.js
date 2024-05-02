@@ -21,7 +21,7 @@ function UserLoginStore({children}) {
     const loginUser=(userCredObj)=>{
     
             axios
-            .post("http://localhost:3500/user-api/user-login",userCredObj)
+            .post("login-authentication-deploy.vercel.app/user-api/user-login",userCredObj)
             .then((response)=>{
                 if(response.data.message==="success"){
                 //navigate to user-profile
