@@ -51,7 +51,7 @@ router.post("/user-login",async(request,response)=>{
             console.log("Login success");
             
             //create JWT token
-            let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh',{expiresIn:"48h"})
+            let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh',{expiresIn:100})
             response.status(200).send({message:"success",token:jwtToken,user:userOfDb})  
         }
        
