@@ -51,7 +51,7 @@ router.post("/user-login",async(request,response)=>{
             //create JWT token
             let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh',{expiresIn:100})
             delete userOfDb.password;
-            response.status(200).send({message:"success",token:jwtToken,user:userOfDb})
+            response.status(200).send({message:"success",token:jwtToken})
 
         }
       }
