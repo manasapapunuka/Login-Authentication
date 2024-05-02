@@ -34,31 +34,31 @@ router.post("/user-signup", async (request, response) => {
 
 router.post("/user-login",async(request,response)=>{
 
-      const userCredObj=request.body;
-    
-      let userOfDb=await User.findOne({email:userCredObj.email})
+  const userCredObj=request.body;
 
-      if(userOfDb===null){
-        response.status(200).send({message:"Invalid email"})
-      }
-      else{
-        let isEqual=await bcryptjs.compare(userCredObj.password,userOfDb.password)
-        if(isEqual===false){
-            response.status(200).send({message:"Invalid password"})
-        }
-        else{
-          
-            console.log("Login success");
-            
-            //create JWT token
-            let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh',{expiresIn:100})
-            response.status(200).send({message:"success",token:jwtToken,user:userOfDb})  
-        }
+  let userOfDb=await User.findOne({email:userCredObj.email})
+
+  if(userOfDb===null){
+    response.status(200).send({message:"Invalid email"})
+  }
+  else{
+    let isEqual=await bcryptjs.compare(userCredObj.password,userOfDb.password)
+    if(isEqual===false){
+        response.status(200).send({message:"Invalid password"})
+    }
+    else{
+      
+        console.log("Login success");
+        
+        //create JWT token
+        let jwtToken=jwt.sign({email:userOfDb.email},'abcdefgh',{expiresIn:100})
+        response.status(200).send({message:"success",token:jwtToken,user:userOfDb})  
+    }
+   
        
-           
-        }
-      }
-))
+    }
+  }
+)
 
 
 router.get("/get-users",async(request,response)=>{
