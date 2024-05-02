@@ -13,37 +13,20 @@ function Register() {
 
   let registerfun=(newUser)=>{
     console.log(newUser)
-   
-    axios.post("login-authentication-deploy.vercel.app/api/user-signup",newUser)
+  
+    axios.post("https://login-authentication-deploy.vercel.app/api/user-signup",newUser)
     .then((response)=>{
     console.log("response is:",response);
 
-      if(response.status===201){
+      if(response.status===200){
         //navigate to login component
         setError("");
         navigate("/login");
       }
-      if(response.status!==201){
+      if(response.status!==200){
         setError(response.data.message)
       }
     })
-  //   .catch(err=>{
-  //     console.log("err is",err)
-  //     //the client was given an error response
-  //    if(err.response){
-  //     setError(err.message);
-  //    }
-  //    //the client never received response
-  //    else if(err.request){
-  //     setError(err.message);
-      
-  //    }
-  //    //for other errors
-  //    else{
-  //     setError(err.message);
-      
-  //    }
-  //  }
   
    .catch(err => {
     if (err.response && err.response.data) {
