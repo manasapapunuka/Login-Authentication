@@ -28,10 +28,12 @@ function UserLoginStore({children}) {
                     console.log("navigated to user profile");
     
                     localStorage.setItem("token",response.data.token)
+                     console.log("token",response.data.token)
+
                     setCurrentUser({...response.data.user});
                     setLoginError("");
                     setUserLoginStatus(true);
-                     console.log(response.data.name);
+                     console.log(response.data.user);
                 }
                 else{
                 //console.log("login failed",err);
