@@ -33,7 +33,7 @@ function UserLoginStore({children}) {
                     setCurrentUser({...response.data.user});
                     setLoginError("");
                     setUserLoginStatus(true);
-                     console.log("user",response.data.user);
+                     console.log("user",response.data);
                 }
                 else{
                 //console.log("login failed",err);
