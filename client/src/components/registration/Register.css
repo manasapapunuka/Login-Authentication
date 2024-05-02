@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Puddles&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Puddles&display=swap');
+
+
+
+
+.register-btn{
+    background-color: #D11534;
+    float:right;
+    font-size: 1.2rem;
+    color:white;
+    font-weight: bold;
+    border:solid #D11534 3px;
+}
+
+.register-head{
+    font-size: 2rem;
+    color:blue;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.register-wrapper{
+    padding:40px;
+    user-select: none;
+}
+ 
+.gender-container{
+    display: flex;
+    gap:1.5rem;
+    
+}
+
+p{
+    font-size: 13px;
+}
+
+.label-container{
+    display: flex;
+    gap:0.5rem;
+}
+
+form{
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    color:black;
+}

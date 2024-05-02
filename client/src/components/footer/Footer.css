@@ -1,0 +1,31 @@
+
+footer {
+  background-color: #000;
+  min-height: 20px; 
+  color: #fff; 
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+
+.icon-wrapper {
+  display: flex;
+  align-items: center; 
+  gap:2rem;
+}
+
+.icon-wrapper a {
+  margin-left: 10px; 
+  color: #fff;
+  font-size: 2rem;
+}
+
+.icon-wrapper a:last-child {
+  margin-left: 0; 
+}
+
+.icon-wrapper a:hover {
+  color: #007bff; 
+}

@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+
+nav{
+padding-top:5px;
+background-image: linear-gradient(black,#94989a);
+box-shadow:1px -1px #1c1e21;
+}
+
+.login-icon,.register-icon{
+    font-size: 3rem;
+    margin-right: 20px;
+}
+
+.active,.login-icon,.register-icon{
+    color:#c6093b;
+    text-shadow: 1px 2px 2px white;
+}
+
+.nav-item{
+    font-family: "Rubik Puddles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transition: all 0.3s ease;
+    padding:10px;
+  }
+
+.nav-item:hover{
+    
+    transform:scale(1.2);
+}
