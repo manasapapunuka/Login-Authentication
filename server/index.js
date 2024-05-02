@@ -6,9 +6,9 @@ const mongoDB=require('./db');
 const cors = require("cors");
 app.use(cors());
 
-app.use((req,res,next)=>{
-  res.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
-  res.header(
+app.use((request,response,next)=>{
+  response.setHeader("Access-Control-Allow-Origin","http://localhost:3000");
+  response.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
@@ -17,8 +17,8 @@ app.use((req,res,next)=>{
 
 
 
-app.get('/', (requset, response) => {
-  res.send('Hello World!')
+app.get('/', (request, response) => {
+  response.send('Hello World!')
 })
 
 
